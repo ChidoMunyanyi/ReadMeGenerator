@@ -1,1 +1,0 @@
-// const inquirer = require('inquirer'); or import inquirer from 'inquirer'; add type: "module" to package.json under main 
