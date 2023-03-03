@@ -1,5 +1,5 @@
 // const inquirer = require('inquirer'); or import inquirer from 'inquirer'; add type: "module" to package.json under main 
-
+const fs = require ('fs');
 
 import inquirer from 'inquirer';
 
