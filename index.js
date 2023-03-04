@@ -1,10 +1,10 @@
 // const inquirer = require('inquirer'); or import inquirer from 'inquirer'; add type: "module" to package.json under main 
 //const fs = require ('fs');
- 
-
+//const grm = require ('.assets/generatingreadme');
+import { generateReadMe } from './assets/generatingreadme';
 
 import inquirer from 'inquirer';
-const questions = 
+
 inquirer
   .prompt([
     {
@@ -34,7 +34,7 @@ inquirer
     },
     {
         type: 'list',
-        message: 'License name',
+        message: 'License Name',
         name: 'License',
         choices: ['MIT', 'ISC', 'GPLv2' ],
         filter(val) {
@@ -54,19 +54,18 @@ inquirer
     {
         type: 'input',
         message: 'Email for Questions',
-        name: 'Questions',
+        name: 'Questions Email',
     },
     {
       type: 'input',
       message: 'Github Username',
-      name: 'Questions',
+      name: 'Questions Github',
     }
 
   ])
-  // function runQuestions () {
-  //   return inquirer.prompt(questions)
   .then((answers) => {
-    console.log(answers)
+    const grm = generateReadMe(answers)
+    console.log(grm)
     return answers
 
   })

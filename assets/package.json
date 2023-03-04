@@ -1,18 +1,13 @@
 {
-  "name": "readmegenerator",
+  "name": "assets",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "generatingreadme.js",
   "type": "module",
-  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "inquirer": "^9.1.4"
-    
-  }
+  "license": "ISC"
 }
