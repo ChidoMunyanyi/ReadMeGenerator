@@ -1,8 +1,10 @@
 // const inquirer = require('inquirer'); or import inquirer from 'inquirer'; add type: "module" to package.json under main 
-const fs = require ('fs');
+//const fs = require ('fs');
+ 
+
 
 import inquirer from 'inquirer';
-
+const questions = 
 inquirer
   .prompt([
     {
@@ -28,12 +30,16 @@ inquirer
     {
         type: 'input',
         message: 'Usage Information',
-        message: 'Usage',
+        name: 'Usage',
     },
     {
-        type: 'input',
+        type: 'list',
         message: 'License name',
         name: 'License',
+        choices: ['MIT', 'ISC', 'GPLv2' ],
+        filter(val) {
+          return val.toLowerCase();
+        }
     },
     {
         type: 'input',
@@ -47,13 +53,26 @@ inquirer
     },
     {
         type: 'input',
-        message: 'Questions,',
+        message: 'Email for Questions',
         name: 'Questions',
+    },
+    {
+      type: 'input',
+      message: 'Github Username',
+      name: 'Questions',
     }
 
   ])
-//   .then((response) =>
-//     response.confirm === response.password
-//       ? console.log('Success!')
-//       : console.log('You forgot your password already?!')
-//   );
+  // function runQuestions () {
+  //   return inquirer.prompt(questions)
+  .then((answers) => {
+    console.log(answers)
+    return answers
+
+  })
+  .catch((error) => { console.log(error) })
+
+  
+
+// .then((response) =>
+  // fs.writeFile()
