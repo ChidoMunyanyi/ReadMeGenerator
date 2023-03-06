@@ -1,6 +1,5 @@
-// const inquirer = require('inquirer'); or import inquirer from 'inquirer'; add type: "module" to package.json under main 
-//const fs = require ('fs');
-//const grm = require ('.assets/generatingreadme');
+import fs from 'fs';
+
 import generateReadMe from './assets/generatingreadme.js';
 
 import inquirer from 'inquirer';
@@ -36,7 +35,7 @@ inquirer
         type: 'list',
         message: 'License Name',
         name: 'License',
-        choices: ['MIT', 'ISC', 'GPLv2' ],
+        choices: ['MIT', 'ISC', 'AGPLv3' ],
         filter(val) {
           return val.toLowerCase();
         }
@@ -63,19 +62,14 @@ inquirer
     }
 
   ])
-  .then((answers) => {
+    .then((answers) => {
     const grm = generateReadMe(answers)
     fs.writeFile('ReadMe.md', grm, function(error) {
       if(error) {console.log('Sorry, file not saved!') }
       else {console.log('Success, file saved')}
     })
-    
-    console.log(grm)
-    return answers
 
   })
   .catch((error) => { console.log(error) })
-
   
-
-
+ 
