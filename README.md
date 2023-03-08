@@ -1,6 +1,6 @@
  
 
-# hello
+# Barker's Dozen
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Table of Contents
@@ -20,26 +20,27 @@
 <br/>
        
  ## Description
-    
+    An app for bakers to network
        
 ## Installation
-    
+    n/a
        
 ## Usage
-    
+    n/a
        
     
 ## Contributing
-    
+    n/a
        
 ## Tests
-    
+    n/a
        
 ## Questions
-    
-    
+    n/a
+    n/a
 
 ## License
-    
+    Licensed under https://choosealicense.com/licenses/mit/ license
+    https://choosealicense.com/licenses/mit/
 
        
