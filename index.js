@@ -36,9 +36,7 @@ inquirer
         message: 'License Name',
         name: 'License',
         choices: ['MIT', 'ISC', 'AGPLv3' ],
-        // filter(val) {
-        //   return val.toLowerCase();
-        // }
+         
     },
     {
         type: 'input',
