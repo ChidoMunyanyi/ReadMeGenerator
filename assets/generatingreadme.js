@@ -80,6 +80,7 @@ ${renderLicenseBadges(answers.License)}
 
 ## License
     ${renderLicenseSection(answers.License)}
+    ${renderLicenseLinks(answers.License)}
 
        `
 
